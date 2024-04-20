@@ -12,7 +12,14 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+          'grid-pattern': `url('/background_images/grid.png')`
       },
+      colors: {
+        'primary-background-black': '#1C1D1E',
+        'gradient-background-from' : 'rgba(153, 153, 153, 0.5)',
+        'gradient-background-to' : 'rgba(153, 153, 153, 0.1)',
+
+      }
     },
   },
   plugins: [],
