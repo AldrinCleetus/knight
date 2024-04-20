@@ -5,8 +5,8 @@ function CapsuleButton() {
   return (
     <GradientBorder button>
       <button>
-        <div className="rounded-full bg-primary-background-black px-10 py-4 flex flex-row gap-2">
-          <p className="text-xl">.resume</p>
+        <div className="rounded-full bg-primary-background-black px-5 p-2  md:px-10 md:py-4 flex flex-row gap-2">
+          <p className="text-xl lg:text-2xl">.resume</p>
           <ExternalLinkIcon
             fill="white"
             width={20}

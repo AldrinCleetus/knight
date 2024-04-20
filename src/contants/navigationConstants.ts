@@ -1,5 +1,5 @@
 export const mainRoutes = {
-    PROJECTS : '/projects',
-    SKILS: '/skills',
-    BLOG: '/blogs'
-}
+  PROJECTS: { name: "projects", link: "/projects" },
+  SKILLS: { name: "skills", link: "/skills" },
+  BLOG: { name: "blogs", link: "/blogs" },
+} as const;
