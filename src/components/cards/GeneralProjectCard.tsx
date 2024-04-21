@@ -28,22 +28,27 @@ const GeneralProjectCard = ({ size = "normal" }: Props) => {
           )}
         >
           {size === "max" && (
-            <div>
+            <>
               <Image
-                className="absolute  left-52 top-20 -rotate-12 scale-50 border-4 border-gradient-background-from rounded-xl"
+                className="absolute  left-52 top-20 -rotate-12 scale-50 border-4 border-gradient-background-from rounded-xl 
+                hover:rotate-0 hover:-translate-x-44 hover:z-10  hover:-translate-y-[24%]  hover:scale-75 transition-all ease-in-out 
+                
+                "
                 width={1280}
                 height={720}
                 alt="project screenshot"
                 src={"/project_screenshots/morax_1.png"}
               />
               <Image
-                className="absolute  left-[30%] top-[10%] -rotate-12 scale-50 border-4 border-gradient-background-from rounded-xl"
+                className="absolute  left-[30%] top-[10%] -rotate-12 scale-50 border-4 border-gradient-background-from rounded-xl
+                hover:rotate-0 hover:-translate-x-52 hover:z-10  hover:-translate-y-[12%] hover:scale-75 transition-all ease-in-out 
+                "
                 width={1280}
                 height={720}
                 alt="project screenshot"
                 src={"/project_screenshots/morax_1.png"}
               />
-            </div>
+            </>
           )}
           <div className="mb-4 gap-3 flex flex-col">
             <NextJsIcon width={32} height={32} fill="white" />
