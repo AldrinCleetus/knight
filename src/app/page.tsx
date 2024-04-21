@@ -1,5 +1,6 @@
 import IntroductionSection from "@/components/landing/IntroductionSection"
 import MyPlatforms from "@/components/landing/MyPlatforms"
+import ProjectList from "@/components/projects/ProjectList"
 import SectionHeading from "@/components/shared/SectionHeading"
 
 export default function Home() {
@@ -9,7 +10,11 @@ export default function Home() {
         <IntroductionSection />
         <MyPlatforms />
       </div>
-      <SectionHeading />
+      <SectionHeading
+        title="Projects"
+        subtitle="Some of my recent projects I've been working on."
+      />
+      <ProjectList />
     </div>
   )
 }

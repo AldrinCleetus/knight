@@ -21,8 +21,8 @@ function MainNavBar() {
           <Link href={mainRoutes.SKILLS.link}>
             <p className="text-2xl ">.skills</p>
           </Link>
-          <Link href={mainRoutes.BLOG.link}>
-            <p className="text-2xl ">.blogs</p>
+          <Link href={mainRoutes.ABOUTME.link}>
+            <p className="text-2xl ">.about_me</p>
           </Link>
         </div>
         <CapsuleButton />
