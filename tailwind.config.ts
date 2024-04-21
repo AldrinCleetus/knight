@@ -18,6 +18,8 @@ const config: Config = {
         'primary-background-black': '#1C1D1E',
         'gradient-background-from' : 'rgba(153, 153, 153, 0.5)',
         'gradient-background-to' : 'rgba(153, 153, 153, 0.1)',
+        'text-secondary-light-gray':'#8E8E8E',
+        'primary-cyan': "#1ABCFE",
 
       }
     },

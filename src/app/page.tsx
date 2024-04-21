@@ -1,12 +1,15 @@
-import MainNavBar from "@/components/navigation/MainNavBar"
-import Image from "next/image"
+import IntroductionSection from "@/components/landing/IntroductionSection"
+import MyPlatforms from "@/components/landing/MyPlatforms"
+import SectionHeading from "@/components/shared/SectionHeading"
 
 export default function Home() {
   return (
-    <main className="flex flex-1 bg-grid-pattern bg-repeat justify-center">
-      <section className="overflow-hidden flex flex-1 px-4 md:px-10  2xl:px-80  ">
-        <MainNavBar />
-      </section>
-    </main>
+    <div>
+      <div className="flex flex-1 flex-col lg:flex-row justify-between gap-12 lg:gap-56 mt-20">
+        <IntroductionSection />
+        <MyPlatforms />
+      </div>
+      <SectionHeading />
+    </div>
   )
 }
