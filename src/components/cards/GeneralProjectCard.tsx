@@ -5,34 +5,54 @@ import clsx from "clsx"
 import LogoCard from "./LogoCard"
 import GitHubIcon from "../icons/GithubIcon"
 import BentoButton from "../buttons/BentoButton"
+import NextJsIcon from "../icons/NextJsIcon"
+import ReactIcon from "../icons/ReactIcon"
+import Image from "next/image"
 
 type Props = {
-  size?: 1 | 2 | 3
+  size?: "normal" | "double" | "max"
 }
 
-const GeneralProjectCard = ({ size = 3 }: Props) => {
+const GeneralProjectCard = ({ size = "normal" }: Props) => {
   return (
     <div
       className={clsx("flex ", {
-        "flex-[1]": size > 1,
-        "w-[33%]": size === 1,
+        "flex-[1]": size === "max",
+        "w-[33%]": size === "normal",
       })}
     >
       <GradientBorder rounded="3xl" expandFull>
         <div
           className={clsx(
-            "rounded-3xl bg-primary-background-black flex flex-1 flex-col p-4 justify-between"
+            "rounded-3xl bg-primary-background-black flex flex-1 flex-col p-4 justify-between overflow-clip relative"
           )}
         >
-          <div>
-            <h3 className="font-bold mb-4 text-xl">Project name</h3>
+          {size === "max" && (
+            <div>
+              <Image
+                className="absolute  left-52 top-20 -rotate-12 scale-50 border-4 border-gradient-background-from rounded-xl"
+                width={1280}
+                height={720}
+                alt="project screenshot"
+                src={"/project_screenshots/morax_1.png"}
+              />
+              <Image
+                className="absolute  left-[30%] top-[10%] -rotate-12 scale-50 border-4 border-gradient-background-from rounded-xl"
+                width={1280}
+                height={720}
+                alt="project screenshot"
+                src={"/project_screenshots/morax_1.png"}
+              />
+            </div>
+          )}
+          <div className="mb-4 gap-3 flex flex-col">
+            <NextJsIcon width={32} height={32} fill="white" />
+            <h3 className="font-bold text-xl">Kalendar</h3>
+            {/* <p className="text-text-secondary-light-gray ">#morax</p> */}
             <p
-              className={clsx(
-                "font-light text-text-secondary-light-gray mb-6",
-                {
-                  // "w-[33%]": size !== 1,
-                }
-              )}
+              className={clsx("font-light text-text-secondary-light-gray ", {
+                // "w-[33%]": size !== 1,
+              })}
             >
               Craft Your Perfect Calendar: Add Images, Events, and More!
             </p>
@@ -41,15 +61,15 @@ const GeneralProjectCard = ({ size = 3 }: Props) => {
           <div>
             <div className="flex flex-row gap-2">
               <LogoCard>
-                <DiscordIcon width={32} height={32} fill="white" />
+                <NextJsIcon width={32} height={32} fill="white" />
               </LogoCard>
               <LogoCard>
-                <DiscordIcon width={32} height={32} fill="white" />
+                <ReactIcon width={32} height={32} fill="white" />
               </LogoCard>
             </div>
             <div className="flex flex-row gap-2 mt-4 ">
-              <div className="bg-secondary-background-gray px-4 py-2 rounded-lg cursor-pointer  hover:scale-105 transition-all ease-in-out">
-                <p className="text-xl">Visit Site</p>
+              <div className="bg-secondary-background-gray px-6 py-2 rounded-lg cursor-pointer justify-center flex hover:scale-105 transition-all ease-in-out">
+                <p className="text-md self-center">Visit Site</p>
               </div>
               <LogoCard>
                 <GitHubIcon width={32} height={32} fill="white" />
