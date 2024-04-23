@@ -8,6 +8,8 @@ import BentoButton from "../buttons/BentoButton"
 import NextJsIcon from "../icons/NextJsIcon"
 import ReactIcon from "../icons/ReactIcon"
 import Image from "next/image"
+import FigmaIcon from "../icons/FigmaIcon"
+import GitIcon from "../icons/GitIcon"
 
 type Props = {
   size?: "normal" | "double" | "max"
@@ -51,7 +53,14 @@ const GeneralProjectCard = ({ size = "normal" }: Props) => {
             </>
           )}
           <div className="mb-4 gap-3 flex flex-col">
-            <NextJsIcon width={32} height={32} fill="white" />
+            <div className="flex flex-row justify-between">
+              <NextJsIcon width={42} height={42} fill="white" />
+
+              {/* make this into a component */}
+              <div className="bg-green-600 px-3  self-start rounded-full">
+                <p className="text-sm text-center">Active</p>
+              </div>
+            </div>
             <h3 className="font-bold text-xl">Kalendar</h3>
             {/* <p className="text-text-secondary-light-gray ">#morax</p> */}
             <p
@@ -70,6 +79,12 @@ const GeneralProjectCard = ({ size = "normal" }: Props) => {
               </LogoCard>
               <LogoCard>
                 <ReactIcon width={32} height={32} fill="white" />
+              </LogoCard>
+              <LogoCard>
+                <FigmaIcon width={32} height={32} fill="white" />
+              </LogoCard>
+              <LogoCard>
+                <GitIcon width={32} height={32} fill="white" />
               </LogoCard>
             </div>
             <div className="flex flex-row gap-2 mt-4 ">
