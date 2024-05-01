@@ -9,6 +9,7 @@ const StatsList = (props: Props) => {
     <div className="flex flex-row justify-evenly gap-4 pt-10">
       <WorkExperienceCard />
       <WorkExperienceCard />
+      <WorkExperienceCard />
     </div>
   )
 }

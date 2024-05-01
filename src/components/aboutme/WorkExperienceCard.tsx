@@ -12,7 +12,7 @@ type Props = {}
 
 const WorkExperienceCard = (props: Props) => {
   return (
-    <div className={clsx("flex flex-1")}>
+    <div className={clsx("flex flex-1 ")}>
       <GradientBorder rounded="3xl" expandFull>
         <div
           className={clsx(
@@ -20,40 +20,51 @@ const WorkExperienceCard = (props: Props) => {
           )}
         >
           <div className="mb-4 gap-3 flex flex-col">
-            <div className="flex flex-row justify-between"></div>
-            <h3 className="font-bold text-2xl">My Journey</h3>
-            {/* <p className="text-text-secondary-light-gray ">#morax</p> */}
-            <p
-              className={clsx("font-light text-text-secondary-light-gray ", {
-                // "w-[33%]": size !== 1,
-              })}
-            >
-              Craft Your Perfect Calendar: Add Images, Events, and More!
-            </p>
+            <div className="flex flex-col justify-between"></div>
+            <h3 className="font-bold text-2xl text-tertiary-background-gray">
+              Based in
+            </h3>
           </div>
+          {/* timeline */}
 
-          <div>
-            <div className="flex flex-row gap-2">
-              <LogoCard>
-                <NextJsIcon width={32} height={32} fill="white" />
-              </LogoCard>
-              <LogoCard>
-                <ReactIcon width={32} height={32} fill="white" />
-              </LogoCard>
-              <LogoCard>
-                <FigmaIcon width={32} height={32} fill="white" />
-              </LogoCard>
-              <LogoCard>
-                <GitIcon width={32} height={32} fill="white" />
-              </LogoCard>
-            </div>
-            <div className="flex flex-row gap-2 mt-4 ">
-              <div className="bg-secondary-background-gray px-6 py-2 rounded-lg cursor-pointer justify-center flex hover:scale-105 transition-all ease-in-out">
-                <p className="text-md self-center">Visit Site</p>
-              </div>
-              <LogoCard>
-                <GitHubIcon width={32} height={32} fill="white" />
-              </LogoCard>
+          <div className="flex flex-1 flex-row">
+            <div className="flex h-full my-4 bg-tertiary-background-gray bg-opacity-50 ml-6 rounded-full w-3 "></div>
+            <div className="flex  flex-1 my-6">
+              <ol className="flex gap-10 flex-col ml-[-29px] my-10 flex-1">
+                {Array(5)
+                  .fill(1)
+                  .map((item, index) => {
+                    return (
+                      <li key={index} className="flex flex-1 flex-row gap-4">
+                        <div>
+                          {index !== 1 ? (
+                            <LogoCard animate={false}>
+                              <NextJsIcon width={32} height={32} fill="white" />
+                            </LogoCard>
+                          ) : (
+                            <LogoCard animate={false}>
+                              <NextJsIcon width={42} height={42} fill="white" />
+                            </LogoCard>
+                          )}
+                        </div>
+                        <div className="flex flex-1  flex-row justify-between">
+                          <div>
+                            <h4>Testing</h4>
+                            <p className="text-sm font-light">Jr UI Designer</p>
+                          </div>
+                          <div>
+                            <p className="text-sm font-light text-text-secondary-light-gray">
+                              2022-2023
+                            </p>
+                            <p className="text-sm font-light text-text-secondary-light-gray text-right">
+                              5 mos
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                    )
+                  })}
+              </ol>
             </div>
           </div>
         </div>

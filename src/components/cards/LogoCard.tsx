@@ -1,11 +1,19 @@
 import React from "react"
 import GradientBorder from "../wrapper/GradientBorder"
+import clsx from "clsx"
 
-type Props = { children: React.ReactNode }
+type Props = { children: React.ReactNode; animate?: boolean }
 
-const LogoCard = ({ children }: Props) => {
+const LogoCard = ({ children, animate = true }: Props) => {
   return (
-    <div className="bg-secondary-background-gray rounded-xl p-2 hover:rotate-3  flex-row flex-0 justify-center hover:scale-105 transition-all ease-in-out cursor-pointer">
+    <div
+      className={clsx(
+        "bg-secondary-background-gray rounded-xl p-2   flex-row flex-0 justify-center  transition-all ease-in-out cursor-pointer",
+        {
+          "hover:rotate-3 hover:scale-105 ": animate,
+        }
+      )}
+    >
       {children}
     </div>
   )

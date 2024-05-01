@@ -20,7 +20,9 @@ const config: Config = {
         'gradient-background-to' : 'rgba(153, 153, 153, 0.1)',
         'text-secondary-light-gray':'#8E8E8E',
         'primary-cyan': "#1ABCFE",
-        'secondary-background-gray':'#434343'
+        'secondary-background-gray':'#434343',
+        'tertiary-background-gray':'rgba(145,145,140,1)'
+
       }
     },
   },

@@ -16,13 +16,13 @@ export default function Home() {
         subtitle="Some of my recent projects I've been working on."
       />
       <ProjectList />
-      {/* <SectionHeading
+      <SectionHeading
         title="About Me"
         subtitle={
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum necessitatibus"
         }
       />
-      <StatsList /> */}
+      <StatsList />
     </div>
   )
 }
