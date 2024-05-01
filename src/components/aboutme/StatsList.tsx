@@ -1,20 +1,14 @@
 import React from "react"
 import GeneralProjectCard from "../cards/GeneralProjectCard"
+import WorkExperienceCard from "./WorkExperienceCard"
 
 type Props = {}
 
 const StatsList = (props: Props) => {
   return (
-    <div className="flex flex-col justify-evenly gap-4 pt-10">
-      <div className="flex flex-row justify-evenly gap-4  ">
-        <GeneralProjectCard />
-        <GeneralProjectCard size="max" />
-      </div>
-      <div className="flex flex-row justify-evenly gap-4  ">
-        <GeneralProjectCard />
-        <GeneralProjectCard />
-        <GeneralProjectCard />
-      </div>
+    <div className="flex flex-row justify-evenly gap-4 pt-10">
+      <WorkExperienceCard />
+      <WorkExperienceCard />
     </div>
   )
 }

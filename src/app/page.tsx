@@ -1,3 +1,4 @@
+import StatsList from "@/components/aboutme/StatsList"
 import IntroductionSection from "@/components/landing/IntroductionSection"
 import MyPlatforms from "@/components/landing/MyPlatforms"
 import ProjectList from "@/components/projects/ProjectList"
@@ -15,12 +16,13 @@ export default function Home() {
         subtitle="Some of my recent projects I've been working on."
       />
       <ProjectList />
-      <SectionHeading
+      {/* <SectionHeading
         title="About Me"
         subtitle={
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum necessitatibus"
         }
       />
+      <StatsList /> */}
     </div>
   )
 }
