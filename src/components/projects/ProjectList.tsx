@@ -13,7 +13,6 @@ const ProjectList = (props: Props) => {
       <div className="flex flex-row  justify-evenly gap-4  ">
         <GeneralProjectCard />
         <GeneralProjectCard />
-
         <GeneralProjectCard />
       </div>
     </div>
