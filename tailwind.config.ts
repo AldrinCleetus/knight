@@ -22,7 +22,6 @@ const config: Config = {
         'primary-cyan': "#1ABCFE",
         'secondary-background-gray':'#434343',
         'tertiary-background-gray':'rgba(145,145,140,1)'
-
       }
     },
   },

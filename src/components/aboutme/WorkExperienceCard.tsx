@@ -20,7 +20,6 @@ const WorkExperienceCard = (props: Props) => {
           )}
         >
           <div className="mb-4 gap-3 flex flex-col">
-            <div className="flex flex-col justify-between"></div>
             <h3 className="font-bold text-2xl text-tertiary-background-gray">
               Based in
             </h3>
