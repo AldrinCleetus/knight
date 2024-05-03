@@ -46,7 +46,7 @@ const WorkExperienceCard = (props: Props) => {
                             </LogoCard>
                           )}
                         </div>
-                        <div className="flex flex-1  flex-row justify-between">
+                        <div className="flex flex-1  flex-row justify-between gap-24">
                           <div>
                             <h4>Testing</h4>
                             <p className="text-sm font-light">Jr UI Designer</p>
