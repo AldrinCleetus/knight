@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+/** @type {import('tailwindcss').Config} */
 
 const config: Config = {
   content: [
@@ -22,7 +23,23 @@ const config: Config = {
         'primary-cyan': "#1ABCFE",
         'secondary-background-gray':'#434343',
         'tertiary-background-gray':'rgba(145,145,140,1)'
-      }
+        
+      },
+      'knight-blue': {
+        '50': '#eef8ff',
+        '100': '#daedff',
+        '200': '#bce1ff',
+        '300': '#8fcfff',
+        '400': '#59b4ff',
+        '500': '#429bfe',
+        '600': '#1d74f3',
+        '700': '#155de0',
+        '800': '#184cb5',
+        '900': '#19438f',
+        '950': '#142a57',
+    },
+      
+    
     },
   },
   plugins: [],

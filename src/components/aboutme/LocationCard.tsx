@@ -25,7 +25,7 @@ const LocationCard = (props: Props) => {
               <h3 className="font-bold text-2xl text-tertiary-background-gray">
                 Based in
               </h3>
-              <p className="font-bold text-4xl ">Kochi, Kerala</p>
+              <p className="font-bold text-3xl mr-4">Kochi, Kerala</p>
             </div>
 
             <MapIcon width={52} height={52} fill="#C7C7C7" />

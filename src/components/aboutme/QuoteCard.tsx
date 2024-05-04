@@ -1,6 +1,7 @@
 import GradientBorder from "../wrapper/GradientBorder"
 import clsx from "clsx"
 import QuoteIcon from "../icons/QuoteIcon"
+import { ColorPallete } from "@/utils/theme/colors"
 
 type Props = {}
 
@@ -18,7 +19,7 @@ const QuoteCard = (props: Props) => {
               className="rotate-180 "
               width={52}
               height={52}
-              fill="#C7C7C7"
+              fill={ColorPallete.cardIcon}
             />
             <div className="flex flex-col gap-2">
               <p className="font-bold text-3xl ">
@@ -31,7 +32,7 @@ const QuoteCard = (props: Props) => {
               className="ml-auto"
               width={52}
               height={52}
-              fill="#C7C7C7"
+              fill={ColorPallete.cardIcon}
             />
           </div>
         </div>

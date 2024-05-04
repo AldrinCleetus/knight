@@ -21,7 +21,7 @@ const WorkExperienceCard = (props: Props) => {
         >
           <div className="mb-4 gap-3 flex flex-col">
             <h3 className="font-bold text-2xl text-tertiary-background-gray">
-              Based in
+              My Journey
             </h3>
           </div>
           {/* timeline */}

@@ -5,6 +5,12 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
+        hostname: "github-readme-stats.vercel.app",
+        port: "",
+        pathname: "/api/top-langs/",
+      },
+      {
+        protocol: "https",
         hostname: "github-readme-streak-stats.herokuapp.com",
         port: "",
         pathname: "/",
