@@ -27,29 +27,25 @@ const WorkExperienceCard = (props: Props) => {
           {/* timeline */}
 
           <div className="flex flex-1 flex-row">
-            <div className="flex h-full my-4 bg-tertiary-background-gray bg-opacity-50 ml-6 rounded-full w-3 "></div>
-            <div className="flex  flex-1 my-6">
-              <ol className="flex gap-10 flex-col ml-[-29px] my-10 flex-1">
+            <div className="flex my-10  bg-tertiary-background-gray bg-opacity-50 ml-6 rounded-full w-3 "></div>
+            <div className="flex  flex-1 my-6 ">
+              <ol className="flex gap-1 justify-between flex-col  ml-[-29px]  flex-1 ">
                 {Array(5)
                   .fill(1)
                   .map((item, index) => {
                     return (
-                      <li key={index} className="flex flex-1 flex-row gap-4">
+                      <li key={index} className="flex flex-row  gap-4">
                         <div>
-                          {index !== 1 ? (
-                            <LogoCard animate={false}>
-                              <NextJsIcon width={32} height={32} fill="white" />
-                            </LogoCard>
-                          ) : (
-                            <LogoCard animate={false}>
-                              <NextJsIcon width={42} height={42} fill="white" />
-                            </LogoCard>
-                          )}
+                          <LogoCard animate={false}>
+                            <NextJsIcon width={32} height={32} fill="white" />
+                          </LogoCard>
                         </div>
-                        <div className="flex flex-1  flex-row justify-between gap-24">
-                          <div>
+                        <div className="flex flex-1  flex-row justify-between gap-16">
+                          <div className="">
                             <h4>Testing</h4>
-                            <p className="text-sm font-light">Jr UI Designer</p>
+                            <p className="text-sm font-light text-nowrap ">
+                              Jr UI Designer
+                            </p>
                           </div>
                           <div>
                             <p className="text-sm font-light text-text-secondary-light-gray">

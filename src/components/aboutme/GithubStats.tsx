@@ -9,14 +9,14 @@ type Props = {}
 
 const GithubStats = (props: Props) => {
   return (
-    <div className={clsx("flex flex-1")}>
+    <div className={clsx("hidden lg:flex flex-1 ")}>
       <GradientBorder rounded="3xl" expandFull>
         <div
           className={clsx(
             "rounded-3xl bg-primary-background-black flex flex-1 flex-col p-4 gap-4 justify-between overflow-clip relative"
           )}
         >
-          <div className=" p-4 rounded-xl ">
+          <div className=" p-4 rounded-xl mx-auto">
             <GitHubCalendar
               username="AldrinCleetus"
               colorScheme="dark"
