@@ -22,7 +22,8 @@ const config: Config = {
         'text-secondary-light-gray':'#8E8E8E',
         'primary-cyan': "#1ABCFE",
         'secondary-background-gray':'#434343',
-        'tertiary-background-gray':'rgba(145,145,140,1)'
+        'tertiary-background-gray':'rgba(145,145,140,1)',
+        'capsule-background-gray':"#2E2E2E"
         
       },
       'knight-blue': {

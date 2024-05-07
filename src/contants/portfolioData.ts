@@ -5,5 +5,4 @@ import { Project, WorkExperience } from "@/utils/types/generalTypes";
 export const featuredProjects : Project[] = [
     
 ]
-
 export const workExperience: WorkExperience[] = []

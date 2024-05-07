@@ -20,6 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="./icon.ico" sizes="any" />
+      </head>
       <body className={Lexend_Font.className + " bg-grid-pattern  "}>
         <main className="flex flex-1  bg-repeat  justify-center flex-col 2xl:max-w-[1900px] 2xl:mx-auto">
           <section className="overflow-hidden flex-col flex flex-1 px-4 md:px-10  2xl:px-80 ">
