@@ -7,7 +7,7 @@ type Props = {}
 
 const InterestsCard = (props: Props) => {
   return (
-    <div className={clsx("flex flex-1 ")}>
+    <div className={clsx("flex flex-1 max-w-[400px]")}>
       <GradientBorder rounded="3xl" expandFull>
         <div
           className={clsx(
@@ -20,16 +20,16 @@ const InterestsCard = (props: Props) => {
                 Hobbies and Interests
               </h3>
 
-              <div className="flex flex-row flex-wrap  max-w-16">
+              <div className="flex flex-row flex-wrap gap-2">
                 {Array(4)
                   .fill(1)
                   .map((item, index) => {
                     return (
                       <div
                         key={index}
-                        className="px-4 bg-capsule-background-gray rounded-full"
+                        className="px-2 py-1 bg-capsule-background-gray rounded-full"
                       >
-                        <p className="text-sm">👨🏽‍💻 Open Source</p>
+                        <p className="text-sm font-light">👨🏽‍💻 Open </p>
                       </div>
                     )
                   })}

@@ -29,12 +29,12 @@ const WorkExperienceCard = (props: Props) => {
           <div className="flex flex-1 flex-row">
             <div className="flex my-10  bg-tertiary-background-gray bg-opacity-50 ml-6 rounded-full w-3 "></div>
             <div className="flex  flex-1 my-6 ">
-              <ol className="flex gap-1 justify-between flex-col  ml-[-29px]  flex-1 ">
+              <ol className="flex gap-12 lg:gap-1 justify-between flex-col  ml-[-29px]  flex-1 ">
                 {Array(4)
                   .fill(1)
                   .map((item, index) => {
                     return (
-                      <li key={index} className="flex flex-row  gap-4">
+                      <li key={index} className="flex flex-row gap-4">
                         <div>
                           <LogoCard animate={false}>
                             <NextJsIcon width={32} height={32} fill="white" />
