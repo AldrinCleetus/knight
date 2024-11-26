@@ -13,11 +13,13 @@ export default function Home() {
       </div>
       <SectionHeading
         title="Projects"
+        id="projects"
         subtitle="Some of my recent projects I've been working on."
       />
       <ProjectList />
       <SectionHeading
         title="About Me"
+        id="aboutme"
         subtitle={
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum necessitatibus"
         }

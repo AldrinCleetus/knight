@@ -8,7 +8,7 @@ function MainNavBar() {
     <nav className=" py-2 md:py-10   w-full  flex flex-row justify-between">
       <div className="self-center">
         <h1 className={`${mySignatureFont.className} text-3xl lg:text-5xl   `}>
-          Mash Barndead
+          <Link href={mainRoutes.HOME.link}>Mash Barndead</Link>
         </h1>
       </div>
       <div className="flex-row flex gap-11 self-center">
