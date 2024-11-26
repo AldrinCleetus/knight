@@ -1,13 +1,17 @@
+import { myIcons } from "@/contants/iconData"
+
 export type ProjectStatus = 'active' | 'completed' | 'inactive' | 'deprecated'
+
+export type IconType = keyof typeof myIcons
 
 export type Project = {
     icon: string,
     siteURL: string | null
-    githubURL: string
+    githubURL: string | null
     name: string
     description: string
     status: ProjectStatus
-    techStack: string[]
+    techStack: IconType[]
 }
 
 export type WorkExperience = {

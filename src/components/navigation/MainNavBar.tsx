@@ -2,13 +2,14 @@ import { mainRoutes } from "@/contants/navigationConstants"
 import Link from "next/link"
 import CapsuleButton from "../buttons/CapsuleButton"
 import { mySignatureFont } from "@/contants/fonts"
+import { generalInformation } from "@/contants/portfolioData"
 
 function MainNavBar() {
   return (
     <nav className=" py-2 md:py-10   w-full  flex flex-row justify-between">
       <div className="self-center">
         <h1 className={`${mySignatureFont.className} text-3xl lg:text-5xl   `}>
-          <Link href={mainRoutes.HOME.link}>Mash Barndead</Link>
+          <Link href={mainRoutes.HOME.link}>{generalInformation.name}</Link>
         </h1>
       </div>
       <div className="flex-row flex gap-11 self-center">

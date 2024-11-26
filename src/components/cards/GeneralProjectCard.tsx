@@ -10,6 +10,7 @@ import ReactIcon from "../icons/ReactIcon"
 import Image from "next/image"
 import FigmaIcon from "../icons/FigmaIcon"
 import GitIcon from "../icons/GitIcon"
+import { myIcons } from "@/contants/iconData"
 
 type Props = {
   size?: "normal" | "double" | "max"
@@ -75,7 +76,8 @@ const GeneralProjectCard = ({ size = "normal" }: Props) => {
           <div>
             <div className="flex flex-row gap-2">
               <LogoCard>
-                <NextJsIcon width={32} height={32} fill="white" />
+                {myIcons.NextJsIcon.icon}
+                {/* <NextJsIcon width={32} height={32} fill="white" /> */}
               </LogoCard>
               <LogoCard>
                 <ReactIcon width={32} height={32} fill="white" />

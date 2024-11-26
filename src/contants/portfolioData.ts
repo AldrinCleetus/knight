@@ -9,7 +9,7 @@ export const workExperience: WorkExperience[] = []
 export const generalInformation = {
     name: "Aldrin Cleetus",
     currentRole: "Jr. Software Engineer",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt alias eius asperiores quibusdam, eaque delectus dolorem odit ab voluptatum ipsa maxime id corrupti, suscipit fugiat pariatur doloribus nulla maiores vel.",
+    description: "You know, I’m something of a developer myself—been doing web, mobile, backend, and everything in between. Flying solo most of the time, learning on the job, and pretending I have a plan. My approach? ‘Figuring it out as I go,’ even when I have no idea what I’m doing. Less ‘the one,’ more let’s see where this goes",
 }
 
 export const aboutMeInformation = {
