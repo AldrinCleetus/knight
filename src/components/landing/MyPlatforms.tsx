@@ -8,6 +8,7 @@ import SignalIcon from "../icons/SignalIcon"
 import DiscordIcon from "../icons/DiscordIcon"
 import SketchFabIcon from "../icons/SketchFabIcon"
 import { socialMediaLinks } from "@/contants/externalLinks"
+import { generalInformation } from "@/contants/portfolioData"
 
 type Props = {}
 
@@ -30,7 +31,7 @@ const MyPlatforms = (props: Props) => {
               Current Role
             </h3>
             <h2 className="text-xl lg:text-2xl font-semibold">
-              UI/UX Designer
+              {generalInformation.currentRole}
             </h2>
             <p className="text-base lg:text-xl opacity-85">
               Feel free to reach out to me, on any of these platforms 😇

@@ -5,7 +5,7 @@ export type ProjectStatus = 'active' | 'completed' | 'inactive' | 'deprecated'
 export type IconType = keyof typeof myIcons
 
 export type Project = {
-    icon: string,
+    icon: IconType,
     siteURL: string | null
     githubURL: string | null
     name: string

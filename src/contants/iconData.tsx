@@ -7,7 +7,10 @@ import GitHubIcon from "@/components/icons/GithubIcon"
 import LinkedInIcon from "@/components/icons/LinkedInIcon"
 import MapIcon from "@/components/icons/MapIcon"
 import NextJsIcon from "@/components/icons/NextJsIcon"
+import KalenderIcon from "@/components/icons/ProjectKalenderIcon"
+import ReactIcon from "@/components/icons/ReactIcon"
 import SignalIcon from "@/components/icons/SignalIcon"
+import TypescriptIcon from "@/components/icons/TypescriptIcon"
 
 export const myIcons = {
   discord: {
@@ -39,5 +42,16 @@ export const myIcons = {
   },
   SignalIcon: {
     icon: <SignalIcon width={32} height={32} fill="white" />,
+  },
+  ReactIcon: {
+    icon: <ReactIcon width={32} height={32} fill="white" />,
+  },
+  TypescriptIcon: {
+    icon: <TypescriptIcon width={32} height={32} />,
+  },
+
+  // project icons
+  KalendarIcon: {
+    icon: <KalenderIcon width={42} height={42} fill="white" />,
   },
 } as const

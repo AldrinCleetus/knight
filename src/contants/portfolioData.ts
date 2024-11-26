@@ -1,9 +1,17 @@
 
 import { Project, WorkExperience } from "@/utils/types/generalTypes";
 
-export const featuredProjects : Project[] = [
-    
-]
+export const featuredProjects : Record<string,Project> = {
+    'kalender':{
+        description:"Craft Your Perfect Calendar: Add Images, Events, and More!",
+        githubURL:"https://github.com/AldrinCleetus/morax",
+        icon: 'KalendarIcon',
+        name:"Kalender",
+        siteURL:"https://kalender.aldrincleetus.com/",
+        status:"active",
+        techStack:['ReactIcon',"FigmaIcon",'GitIcon']
+    }
+};
 export const workExperience: WorkExperience[] = []
 
 export const generalInformation = {
