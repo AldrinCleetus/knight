@@ -9,6 +9,8 @@ import DiscordIcon from "../icons/DiscordIcon"
 import SketchFabIcon from "../icons/SketchFabIcon"
 import { socialMediaLinks } from "@/contants/externalLinks"
 import { generalInformation } from "@/contants/portfolioData"
+import BlueskyIcon from "../icons/BlueskyIcon"
+import DribbleIcon from "../icons/DribbleIcon"
 
 type Props = {}
 
@@ -44,24 +46,24 @@ const MyPlatforms = (props: Props) => {
           <BentoButton linkURL={socialMediaLinks.linkedIn}>
             <LinkedInIcon width={32} height={32} fill="white" />
           </BentoButton>
-          <BentoButton>
-            <SignalIcon width={32} height={32} fill="white" />
+          <BentoButton linkURL={socialMediaLinks.bluesky}>
+            <BlueskyIcon width={32} height={32} fill="white" />
           </BentoButton>
         </div>
         <div className="hidden md:flex flex-row gap-2">
-          <BentoButton>
+          <BentoButton linkURL={socialMediaLinks.discord}>
             <DiscordIcon width={32 * 4} height={32} fill="white" />
           </BentoButton>
-          <BentoButton>
-            <SketchFabIcon width={32 * 4} height={32} fill="white" />
+          <BentoButton linkURL={socialMediaLinks.dribble}>
+            <DribbleIcon width={32 * 4} height={32} fill="white" />
           </BentoButton>
         </div>
         <div className=" md:hidden flex   flex-row gap-2">
-          <BentoButton>
+          <BentoButton linkURL={socialMediaLinks.discord}>
             <DiscordIcon width={32} height={32} fill="white" />
           </BentoButton>
-          <BentoButton>
-            <SketchFabIcon width={32} height={32} fill="white" />
+          <BentoButton linkURL={socialMediaLinks.dribble}>
+            <DribbleIcon width={32} height={32} fill="white" />
           </BentoButton>
         </div>
       </div>

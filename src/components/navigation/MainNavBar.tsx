@@ -19,9 +19,9 @@ function MainNavBar() {
           <Link href={mainRoutes.PROJECTS.link}>
             <p className="text-2xl ">.projects</p>
           </Link>
-          <Link href={mainRoutes.SKILLS.link}>
+          {/* <Link href={mainRoutes.SKILLS.link}>
             <p className="text-2xl ">.skills</p>
-          </Link>
+          </Link> */}
           <Link href={mainRoutes.ABOUTME.link}>
             <p className="text-2xl ">.about_me</p>
           </Link>
