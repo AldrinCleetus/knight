@@ -71,12 +71,12 @@ export const aboutMeInformation = {
 
 export const workExperienceList : Companies[]= [
   {
-    companyName: 'Edith Industries',
-    position: "Frontend Developer Intern",
-    startDate: new Date("01 Aug 2020"),
-    endDate: new Date("01 Nov 2020"),
-    icon: "EdithIndustriesLogo",
-    linkedInPage:"https://www.linkedin.com/company/edithindustries"
+    companyName: 'Netstratum Technologies',
+    position: "Jr. Software Engineer",
+    startDate: new Date("01 Aug 2023"),
+    endDate: null,
+    icon: "NetstratumLogo",
+    linkedInPage:'https://www.linkedin.com/company/netstratum'
   },
   {
     companyName: 'NAVA Design and Innovations',
@@ -87,13 +87,15 @@ export const workExperienceList : Companies[]= [
     linkedInPage:'https://www.linkedin.com/company/nava-design-innovation-private-limited'
   },
   {
-    companyName: 'Netstratum Technologies',
-    position: "Jr. Software Engineer",
-    startDate: new Date("01 Aug 2023"),
-    endDate: null,
-    icon: "NetstratumLogo",
-    linkedInPage:'https://www.linkedin.com/company/netstratum'
+    companyName: 'Edith Industries',
+    position: "Frontend Developer Intern",
+    startDate: new Date("01 Aug 2020"),
+    endDate: new Date("01 Nov 2020"),
+    icon: "EdithIndustriesLogo",
+    linkedInPage:"https://www.linkedin.com/company/edithindustries"
   },
+  
+ 
 ]
 
 

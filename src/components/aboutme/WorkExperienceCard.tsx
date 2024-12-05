@@ -37,7 +37,7 @@ const WorkExperienceCard = (props: Props) => {
             <div className="flex my-10  bg-tertiary-background-gray bg-opacity-50 ml-6 rounded-full w-3 "></div>
             <div className="flex  flex-1 my-6 ">
               <ol className="flex gap-12 lg:gap-1 justify-between flex-col  ml-[-29px]  flex-1 ">
-                {workExperienceList.reverse().map((item, index) => {
+                {workExperienceList.map((item, index) => {
                   return (
                     <li key={index} className="flex flex-row gap-4">
                       <div className="w-[42px] h-[42px] rounded-lg overflow-hidden">
