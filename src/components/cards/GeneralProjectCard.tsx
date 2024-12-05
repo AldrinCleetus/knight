@@ -5,6 +5,7 @@ import GitHubIcon from "../icons/GithubIcon"
 import Image from "next/image"
 import { myIcons } from "@/contants/iconData"
 import { Project } from "@/utils/types/generalTypes"
+import Link from "next/link"
 
 type Props = {
   size?: "normal" | "double" | "max"
@@ -35,7 +36,7 @@ const GeneralProjectCard = ({ size = "normal", project }: Props) => {
                 width={1280}
                 height={720}
                 alt="project screenshot"
-                src={"/project_screenshots/morax_1.png"}
+                src={"/project_screenshots/morax_2.png"}
               />
               <Image
                 className="absolute  left-[30%] top-[10%] -rotate-12 scale-50 border-4 border-gradient-background-from rounded-xl
@@ -51,10 +52,16 @@ const GeneralProjectCard = ({ size = "normal", project }: Props) => {
           <div className="mb-4 gap-3 flex flex-col">
             <div className="flex flex-row justify-between">
               {/* <NextJsIcon width={42} height={42} fill="white" /> */}
-              {myIcons.KalendarIcon.icon}
+              {myIcons[project.icon].icon}
 
               {/* make this into a component */}
-              <div className="bg-green-600 px-3  self-start rounded-full">
+              <div
+                className={clsx(" px-3  self-start rounded-full", {
+                  "bg-green-600": project.status === "active",
+                  "bg-red-600": project.status === "inactive",
+                  "bg-orange-600": project.status === "deprecated",
+                })}
+              >
                 <p className="text-sm text-center">{project.status}</p>
               </div>
             </div>
@@ -79,24 +86,16 @@ const GeneralProjectCard = ({ size = "normal", project }: Props) => {
                   </LogoCard>
                 )
               })}
-
-              {/* <LogoCard>
-                <ReactIcon width={32} height={32} fill="white" />
-              </LogoCard>
-              <LogoCard>
-                <FigmaIcon width={32} height={32} fill="white" />
-              </LogoCard>
-              <LogoCard>
-                <GitIcon width={32} height={32} fill="white" />
-              </LogoCard> */}
             </div>
             <div className="flex flex-row gap-2 mt-4 ">
               <div className="bg-secondary-background-gray px-6 py-2 rounded-lg cursor-pointer justify-center flex hover:scale-105 transition-all ease-in-out">
                 <p className="text-md self-center">Visit Site</p>
               </div>
-              <LogoCard>
-                <GitHubIcon width={32} height={32} fill="white" />
-              </LogoCard>
+              <Link href={project.githubURL || ""}>
+                <LogoCard>
+                  <GitHubIcon width={32} height={32} fill="white" />
+                </LogoCard>
+              </Link>
             </div>
           </div>
         </div>

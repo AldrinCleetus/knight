@@ -11,7 +11,9 @@ export type Project = {
     name: string
     description: string
     status: ProjectStatus
-    techStack: IconType[]
+    techStack: IconType[],
+    siteImage1?: string,
+    siteImage2?: string
 }
 
 export type WorkExperience = {

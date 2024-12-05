@@ -1,16 +1,22 @@
+import AnimeLibraryIcon from "@/components/icons/AnimeLibraryIcon"
 import DiscordIcon from "@/components/icons/DiscordIcon"
 import EmailIcon from "@/components/icons/EmailIcon"
 import ExternalLinkIcon from "@/components/icons/ExternalLinkIcon"
 import FigmaIcon from "@/components/icons/FigmaIcon"
 import GitIcon from "@/components/icons/GitIcon"
 import GitHubIcon from "@/components/icons/GithubIcon"
+import GrimlockIcon from "@/components/icons/GrimlockIcon"
 import LinkedInIcon from "@/components/icons/LinkedInIcon"
 import MapIcon from "@/components/icons/MapIcon"
 import NextJsIcon from "@/components/icons/NextJsIcon"
+import NodeJsIcon from "@/components/icons/NodeJsIcon"
+import PoovuIcon from "@/components/icons/PoovuuIcon"
 import KalenderIcon from "@/components/icons/ProjectKalenderIcon"
 import ReactIcon from "@/components/icons/ReactIcon"
 import SignalIcon from "@/components/icons/SignalIcon"
 import TypescriptIcon from "@/components/icons/TypescriptIcon"
+import VentiIcon from "@/components/icons/VentiIcon"
+import StackIcon from "tech-stack-icons"
 
 export const myIcons = {
   discord: {
@@ -49,9 +55,24 @@ export const myIcons = {
   TypescriptIcon: {
     icon: <TypescriptIcon width={32} height={32} />,
   },
+  NodeJsIcon: {
+    icon: <NodeJsIcon width={32} height={32} />,
+  },
 
   // project icons
   KalendarIcon: {
     icon: <KalenderIcon width={42} height={42} fill="white" />,
+  },
+  GrimlockIcon: {
+    icon: <GrimlockIcon width={42} height={42} fill="white" />,
+  },
+  PoovuIcon: {
+    icon: <PoovuIcon width={42} height={42} fill="white" />,
+  },
+  VentiIcon: {
+    icon: <VentiIcon width={42} height={42} fill="white" />,
+  },
+  AnimeLibraryIcon: {
+    icon: <AnimeLibraryIcon width={42} height={42} fill="white" />,
   },
 } as const

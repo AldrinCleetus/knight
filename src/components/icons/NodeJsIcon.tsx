@@ -13,7 +13,7 @@ const NodeJsIcon = (props: SVGProps<SVGSVGElement>) => (
         width: props.width,
         height: props.width,
       }}
-      name="typescript"
+      name="nodejs"
     />
   </div>
 )
