@@ -22,3 +22,12 @@ export type WorkExperience = {
    yearRange: string
    yearsOfExperience : string
 }
+
+export type Companies = {
+    companyName: string;
+    position: string;
+    startDate: Date;
+    endDate: Date | null;
+    icon: IconType;
+    linkedInPage:string
+} 

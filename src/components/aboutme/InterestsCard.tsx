@@ -2,6 +2,7 @@ import React from "react"
 import GradientBorder from "../wrapper/GradientBorder"
 import clsx from "clsx"
 import MapIcon from "../icons/MapIcon"
+import { hobbiesAndInterests } from "@/contants/portfolioData"
 
 type Props = {}
 
@@ -21,18 +22,16 @@ const InterestsCard = (props: Props) => {
               </h3>
 
               <div className="flex flex-row flex-wrap gap-2">
-                {Array(4)
-                  .fill(1)
-                  .map((item, index) => {
-                    return (
-                      <div
-                        key={index}
-                        className="px-2 py-1 bg-capsule-background-gray rounded-full"
-                      >
-                        <p className="text-sm font-light">👨🏽‍💻 Open </p>
-                      </div>
-                    )
-                  })}
+                {hobbiesAndInterests.map((item, index) => {
+                  return (
+                    <div
+                      key={index}
+                      className="px-2 py-1 bg-capsule-background-gray rounded-full"
+                    >
+                      <p className="text-sm font-light">{item}</p>
+                    </div>
+                  )
+                })}
               </div>
             </div>
           </div>

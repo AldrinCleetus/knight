@@ -1,5 +1,6 @@
 import AnimeLibraryIcon from "@/components/icons/AnimeLibraryIcon"
 import DiscordIcon from "@/components/icons/DiscordIcon"
+import EdithIndustriesLogo from "@/components/icons/EdithIndustriesLogo"
 import EmailIcon from "@/components/icons/EmailIcon"
 import ExternalLinkIcon from "@/components/icons/ExternalLinkIcon"
 import FigmaIcon from "@/components/icons/FigmaIcon"
@@ -8,6 +9,8 @@ import GitHubIcon from "@/components/icons/GithubIcon"
 import GrimlockIcon from "@/components/icons/GrimlockIcon"
 import LinkedInIcon from "@/components/icons/LinkedInIcon"
 import MapIcon from "@/components/icons/MapIcon"
+import NavaLogo from "@/components/icons/NavaLogo"
+import NetstratumLogo from "@/components/icons/NetstratumLogo"
 import NextJsIcon from "@/components/icons/NextJsIcon"
 import NodeJsIcon from "@/components/icons/NodeJsIcon"
 import PoovuIcon from "@/components/icons/PoovuuIcon"
@@ -74,5 +77,17 @@ export const myIcons = {
   },
   AnimeLibraryIcon: {
     icon: <AnimeLibraryIcon width={42} height={42} fill="white" />,
+  },
+
+  // Company logos
+
+  NetstratumLogo: {
+    icon: <NetstratumLogo width={42} height={42} fill="white" />,
+  },
+  EdithIndustriesLogo: {
+    icon: <EdithIndustriesLogo width={42} height={42} fill="white" />,
+  },
+  NAVAlogo: {
+    icon: <NavaLogo width={42} height={42} fill="white" />,
   },
 } as const

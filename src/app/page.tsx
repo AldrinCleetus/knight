@@ -20,9 +20,7 @@ export default function Home() {
       <SectionHeading
         title="About Me"
         id="aboutme"
-        subtitle={
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum necessitatibus"
-        }
+        subtitle={"Turning coffee into code and bugs into features!"}
       />
       <StatsList />
     </div>

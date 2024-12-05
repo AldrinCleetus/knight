@@ -1,4 +1,4 @@
-import { Project, WorkExperience } from "@/utils/types/generalTypes"
+import { Companies, Project, WorkExperience } from "@/utils/types/generalTypes"
 
 export const featuredProjects: Record<string, Project> = {
   kalender: {
@@ -65,3 +65,36 @@ export const aboutMeInformation = {
   quote:
     "Jack of all trades, master of none, though ofttimes better than master of one.",
 }
+
+
+
+
+export const workExperienceList : Companies[]= [
+  {
+    companyName: 'Edith Industries',
+    position: "Frontend Developer Intern",
+    startDate: new Date("01 Aug 2020"),
+    endDate: new Date("01 Nov 2020"),
+    icon: "EdithIndustriesLogo",
+    linkedInPage:"https://www.linkedin.com/company/edithindustries"
+  },
+  {
+    companyName: 'NAVA Design and Innovations',
+    position: "Embedded Systems Intern",
+    startDate: new Date("01 Feb 2023"),
+    endDate: new Date("01 Jun 2023"),
+    icon: "NAVAlogo",
+    linkedInPage:'https://www.linkedin.com/company/nava-design-innovation-private-limited'
+  },
+  {
+    companyName: 'Netstratum Technologies',
+    position: "Jr. Software Engineer",
+    startDate: new Date("01 Aug 2023"),
+    endDate: null,
+    icon: "NetstratumLogo",
+    linkedInPage:'https://www.linkedin.com/company/netstratum'
+  },
+]
+
+
+export const hobbiesAndInterests = ['Coding','Gaming','Anime','Sleeping','Movies','TV Shows','Typing']
