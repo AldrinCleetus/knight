@@ -1,7 +1,8 @@
 import { generalInformation } from "@/contants/portfolioData"
+import { portfolioVersion } from "@/contants/version";
 
 export const getFooterText = ()=>{
-    return `@${new Date().getFullYear()} ${generalInformation.name}`
+    return `@${new Date().getFullYear()} ${generalInformation.name} - ${portfolioVersion}`
 }
 
 
