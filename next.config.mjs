@@ -11,9 +11,9 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "github-readme-streak-stats.herokuapp.com",
+        hostname: "**.herokuapp.com",
         port: "",
-        pathname: "/",
+        pathname: "**",
       },
       {
         protocol: "https",
