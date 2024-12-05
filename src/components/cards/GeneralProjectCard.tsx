@@ -88,9 +88,11 @@ const GeneralProjectCard = ({ size = "normal", project }: Props) => {
               })}
             </div>
             <div className="flex flex-row gap-2 mt-4 ">
-              <div className="bg-secondary-background-gray px-6 py-2 rounded-lg cursor-pointer justify-center flex hover:scale-105 transition-all ease-in-out">
-                <p className="text-md self-center">Visit Site</p>
-              </div>
+              <Link href={project.siteURL || ""}>
+                <div className="bg-secondary-background-gray px-6 py-2 rounded-lg cursor-pointer justify-center flex hover:scale-105 transition-all ease-in-out">
+                  <p className="text-md self-center">Visit Site</p>
+                </div>
+              </Link>
               <Link href={project.githubURL || ""}>
                 <LogoCard>
                   <GitHubIcon width={32} height={32} fill="white" />
