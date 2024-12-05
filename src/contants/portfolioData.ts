@@ -60,7 +60,7 @@ export const generalInformation = {
 
 export const generalMetaInformation = {
   description: 'Developer tackling web, mobile, and backend projects—learning, building, and figuring it out as I go',
-  image: 'https://github.com/AldrinCleetus/knight/blob/main/public/meta/metaimage.jpg',
+  image: 'https://github.com/AldrinCleetus/knight/blob/main/public/meta/metaimage.jpg?raw=true',
   url: 'aldrincleetus.com',
   content:'My Portfolio'
 }
