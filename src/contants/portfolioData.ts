@@ -58,6 +58,13 @@ export const generalInformation = {
     "You know, I’m something of a developer myself—been doing web, mobile, backend, and everything in between. Flying solo most of the time, learning on the job. As for my approach? ‘Figuring it out as I go,’ even when I have no idea what I’m doing.",
 }
 
+export const generalMetaInformation = {
+  description: 'Developer tackling web, mobile, and backend projects—learning, building, and figuring it out as I go',
+  image: '/meta/metaimage.jpg',
+  url: 'aldrincleetus.com',
+  content:'My Portfolio'
+}
+
 export const aboutMeInformation = {
   aboutMeDescription:
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum necessitatibus",

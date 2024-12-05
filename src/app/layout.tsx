@@ -6,6 +6,7 @@ import BottomNavigationBar from "@/components/navigation/BottomNavigationBar"
 import MainNavBar from "@/components/navigation/MainNavBar"
 import Footer from "@/components/shared/Footer"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { generalMetaInformation } from "@/contants/portfolioData"
 
 const Lexend_Font = Lexend_Deca({ subsets: ["latin"] })
 
@@ -22,6 +23,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta property="og:title" content={generalMetaInformation.content} />
+        <meta
+          property="og:description"
+          content={generalMetaInformation.description}
+        />
+        <meta property="og:image" content={generalMetaInformation.image} />
+        <meta property="og:url" content={generalMetaInformation.url} />
         <link rel="icon" href="./icon.ico" sizes="any" />
       </head>
       <body className={Lexend_Font.className + " bg-grid-pattern  "}>
