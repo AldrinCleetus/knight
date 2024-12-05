@@ -34,7 +34,6 @@ const GithubStats = (props: Props) => {
 
           <div className="flex flex-row justify-between px-4 gap-4">
             <Image
-              unoptimized
               src="https://github-readme-streak-stats.herokuapp.com/?user=AldrinCleetus&theme=github-dark-blue&hide_border=true&border_radius=20"
               alt="GitHub Streak"
               width={495}
@@ -42,6 +41,7 @@ const GithubStats = (props: Props) => {
             />
 
             <Image
+              unoptimized
               src="https://github-readme-stats.vercel.app/api/top-langs/?username=AldrinCleetus&theme=dark&hide_border=true&border_radius=10&include_all_commits=false&count_private=false&layout=compact"
               alt="Trulli"
               width="350"
