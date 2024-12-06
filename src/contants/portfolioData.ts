@@ -40,7 +40,7 @@ export const featuredProjects: Record<string, Project> = {
     techStack: ["ReactIcon", "FigmaIcon", "GitIcon"],
   },
   animelibrary: {
-    description: "A cab booking service web app (concept).",
+    description: "A way to see your completed anime collection from MyAnimeList and even take screenshots to share them",
     githubURL: "https://github.com/AldrinCleetus/AnimeLibrary",
     icon: "AnimeLibraryIcon",
     name: "Anime Library",
