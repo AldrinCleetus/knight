@@ -42,7 +42,7 @@ export default function RootLayout({
             {children}
           </section>
         </main>
-        <BottomNavigationBar />
+        {/* <BottomNavigationBar /> */}
         <Footer />
       </body>
     </html>
