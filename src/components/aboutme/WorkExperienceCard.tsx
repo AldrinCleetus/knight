@@ -1,21 +1,23 @@
-import React from "react"
-import LogoCard from "../cards/LogoCard"
-import NextJsIcon from "../icons/NextJsIcon"
-import ReactIcon from "../icons/ReactIcon"
-import FigmaIcon from "../icons/FigmaIcon"
-import GitIcon from "../icons/GitIcon"
-import GitHubIcon from "../icons/GithubIcon"
-import GradientBorder from "../wrapper/GradientBorder"
-import clsx from "clsx"
-import { workExperienceList } from "@/contants/portfolioData"
+"use client";
+
+import React from "react";
+import LogoCard from "../cards/LogoCard";
+import NextJsIcon from "../icons/NextJsIcon";
+import ReactIcon from "../icons/ReactIcon";
+import FigmaIcon from "../icons/FigmaIcon";
+import GitIcon from "../icons/GitIcon";
+import GitHubIcon from "../icons/GithubIcon";
+import GradientBorder from "../wrapper/GradientBorder";
+import clsx from "clsx";
+import { workExperienceList } from "@/contants/portfolioData";
 import {
   formatYearRange,
   getDurationString,
-} from "@/utils/helpers/generalHelper"
-import { myIcons } from "@/contants/iconData"
-import Link from "next/link"
+} from "@/utils/helpers/generalHelper";
+import { myIcons } from "@/contants/iconData";
+import Link from "next/link";
 
-type Props = {}
+type Props = {};
 
 const WorkExperienceCard = (props: Props) => {
   return (
@@ -64,7 +66,7 @@ const WorkExperienceCard = (props: Props) => {
                         </div>
                       </div>
                     </li>
-                  )
+                  );
                 })}
               </ol>
             </div>
@@ -72,7 +74,7 @@ const WorkExperienceCard = (props: Props) => {
         </div>
       </GradientBorder>
     </div>
-  )
-}
+  );
+};
 
-export default WorkExperienceCard
+export default WorkExperienceCard;
