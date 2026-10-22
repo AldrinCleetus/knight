@@ -12,21 +12,23 @@ function MainNavBar() {
           <Link href={mainRoutes.HOME.link}>{generalInformation.name}</Link>
         </h1>
       </div>
-      <div className="flex-row flex gap-11 self-center">
+      <div className="flex-row flex gap-6 md:gap-11 self-center">
         <div
-          className={`hidden  flex-row md:flex gap-11 self-center font-light `}
+          className={`flex flex-row gap-6 md:gap-11 self-center font-light `}
         >
           <Link href={mainRoutes.PROJECTS.link}>
-            <p className="text-2xl ">.projects</p>
+            <p className="text-lg md:text-2xl hover:text-primary-cyan transition-colors">.projects</p>
           </Link>
-          {/* <Link href={mainRoutes.SKILLS.link}>
-            <p className="text-2xl ">.skills</p>
-          </Link> */}
+          <Link href={mainRoutes.BLOG.link}>
+            <p className="text-lg md:text-2xl hover:text-primary-cyan transition-colors">.blogs</p>
+          </Link>
           <Link href={mainRoutes.ABOUTME.link}>
-            <p className="text-2xl ">.about_me</p>
+            <p className="text-lg md:text-2xl hover:text-primary-cyan transition-colors">.about_me</p>
           </Link>
         </div>
-        <CapsuleButton />
+        <div className="hidden sm:block">
+          <CapsuleButton />
+        </div>
       </div>
     </nav>
   )

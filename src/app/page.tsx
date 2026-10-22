@@ -3,6 +3,7 @@ import IntroductionSection from "@/components/landing/IntroductionSection"
 import MyPlatforms from "@/components/landing/MyPlatforms"
 import ProjectList from "@/components/projects/ProjectList"
 import SectionHeading from "@/components/shared/SectionHeading"
+import RecentBlogs from "@/components/blogs/RecentBlogs"
 
 export default function Home() {
   return (
@@ -17,6 +18,12 @@ export default function Home() {
         subtitle="Some of my recent projects I've been working on."
       />
       <ProjectList />
+      <SectionHeading
+        title="Blogs"
+        id="blogs"
+        subtitle="Recent thoughts, tutorials, and engineering notes."
+      />
+      <RecentBlogs />
       <SectionHeading
         title="About Me"
         id="aboutme"
