@@ -9,4 +9,4 @@ export const socialMediaLinks = {
     dribble : "https://dribbble.com/AldrinCleetus"
 } as const
 
-export const resumeLink = 'https://drive.google.com/file/d/1hMFqyad2R3oM5XBpUMUmuLDwag-3PyoS/view?usp=sharing'
+export const resumeLink = 'https://drive.google.com/file/d/1d3GLyDlx4Ided6rFW4hjO4RgZKqFDKea/view?usp=sharing'
