@@ -195,8 +195,11 @@ export default function FullscreenImageViewer({
                 {photo.title || photo.slug}
               </span>
               {photo.location && (
-                <span className="text-primary-cyan text-xs font-light flex items-center gap-1">
-                  <span>📍</span>
+                <span className="text-primary-cyan text-xs font-light flex items-center gap-1.5">
+                  <svg className="w-3.5 h-3.5 text-primary-cyan flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
                   <span>{photo.location}</span>
                 </span>
               )}
@@ -237,7 +240,9 @@ export default function FullscreenImageViewer({
                 title="Toggle Monitor Fullscreen (F)"
                 className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-neutral-900/90 hover:bg-neutral-800 border border-white/10 text-xs text-white/80 hover:text-white transition-colors"
               >
-                <span>{isNativeFullscreen ? "⛶" : "⛶"}</span>
+                <svg className="w-3.5 h-3.5 text-white/80 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-5h-4m4 0v4m0-4l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                </svg>
                 <span>{isNativeFullscreen ? ".exit_screen" : ".fullscreen"}</span>
               </button>
 

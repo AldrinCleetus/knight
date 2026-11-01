@@ -203,7 +203,10 @@ export default function PhotoGallery({ photos, initialSlug }: PhotoGalleryProps)
                         )}
                         {photo.location && (
                           <p className="text-primary-cyan text-xs font-light mt-1 flex items-center gap-1.5">
-                            <span>📍</span>
+                            <svg className="w-3.5 h-3.5 text-primary-cyan flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
                             <span>{photo.location}</span>
                           </p>
                         )}
@@ -278,7 +281,9 @@ export default function PhotoGallery({ photos, initialSlug }: PhotoGalleryProps)
                     onClick={() => setIsFullscreenViewerOpen(true)}
                     className="absolute bottom-4 right-4 px-3.5 py-1.5 rounded-full bg-black/80 hover:bg-black backdrop-blur-md border border-white/15 text-xs text-white/90 hover:text-white flex items-center gap-1.5 opacity-90 hover:opacity-100 transition-all hover:scale-105 shadow-xl"
                   >
-                    <span>⛶</span>
+                    <svg className="w-3.5 h-3.5 text-white/90 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-5h-4m4 0v4m0-4l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                    </svg>
                     <span>.inspect_zoom</span>
                   </button>
                 </div>
@@ -301,7 +306,10 @@ export default function PhotoGallery({ photos, initialSlug }: PhotoGalleryProps)
                     <div className="flex items-center gap-2.5 flex-wrap">
                       {selectedPhoto.location && (
                         <span className="text-xs px-3.5 py-1.5 rounded-full bg-capsule-background-gray text-primary-cyan font-light border border-white/10 flex items-center gap-1.5">
-                          <span>📍</span>
+                          <svg className="w-3 h-3 text-primary-cyan flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>
                           <span>{selectedPhoto.location}</span>
                         </span>
                       )}
@@ -320,7 +328,9 @@ export default function PhotoGallery({ photos, initialSlug }: PhotoGalleryProps)
                       onClick={() => setIsFullscreenViewerOpen(true)}
                       className="flex items-center gap-2 px-4 py-2 rounded-full bg-capsule-background-gray hover:bg-neutral-700 border border-white/10 text-xs text-white transition-all hover:scale-105"
                     >
-                      <span>⛶</span>
+                      <svg className="w-3.5 h-3.5 text-white flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-5h-4m4 0v4m0-4l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                      </svg>
                       <span>.fullscreen_zoom</span>
                     </button>
 
