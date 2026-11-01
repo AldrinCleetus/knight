@@ -36,3 +36,27 @@ body {
     text-wrap: balance;
   }
 }
+
+/* ─── View Transitions ─────────────────────────────────────────── */
+@keyframes vt-fade-in {
+  from { opacity: 0; }
+}
+@keyframes vt-fade-out {
+  to { opacity: 0; }
+}
+
+/* Page-level crossfade */
+::view-transition-old(root) {
+  animation: 220ms ease vt-fade-out both;
+}
+::view-transition-new(root) {
+  animation: 280ms ease vt-fade-in both;
+}
+
+/* Shared photo morphs automatically between positions/sizes.
+   Just tune the duration & easing: */
+::view-transition-old(photo-*),
+::view-transition-new(photo-*) {
+  animation-duration: 400ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

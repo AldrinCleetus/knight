@@ -7,6 +7,16 @@ export type GradientBorderProps = Readonly<{
   expandFull?: boolean
 }>
 
+const roundedMap = {
+  sm: "rounded-sm",
+  md: "rounded-md",
+  lg: "rounded-lg",
+  xl: "rounded-xl",
+  "2xl": "rounded-2xl",
+  "3xl": "rounded-3xl",
+  full: "rounded-full",
+} as const
+
 function GradientBorder({
   children,
   button = false,
@@ -16,7 +26,8 @@ function GradientBorder({
   return (
     <div
       className={clsx(
-        `rounded-${rounded} bg-gradient-to-b from-gradient-background-from to-gradient-background-to  p-[2px]  flex`,
+        roundedMap[rounded],
+        "bg-gradient-to-b from-gradient-background-from to-gradient-background-to p-[2px] flex",
         {
           "hover:scale-105 transition-all ease-out": button,
           "flex-1": expandFull,
