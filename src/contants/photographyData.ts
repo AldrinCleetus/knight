@@ -4,6 +4,7 @@ export const photographyData: Photo[] = [
   {
     slug: "blue-tiger-butterfly",
     src: "/photography/blue-tiger-butterfly.jpg",
+    rawUrl: "/photography/blue-tiger-butterfly.jpg",
     alt: "Blue Tiger butterfly resting on tropical foliage",
     width: 1024,
     height: 682,

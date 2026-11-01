@@ -1,6 +1,7 @@
 export interface Photo {
   slug: string
   src: string
+  rawUrl?: string
   alt: string
   width: number
   height: number
