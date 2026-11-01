@@ -8,6 +8,7 @@ export interface Photo {
   title?: string
   description?: string
   location?: string
+  locationGroup?: string
   takenAt?: string
   // Technical metadata
   gear?: string

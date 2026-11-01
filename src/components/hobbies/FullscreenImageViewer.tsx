@@ -246,20 +246,29 @@ export default function FullscreenImageViewer({
                 <span>{isNativeFullscreen ? ".exit_screen" : ".fullscreen"}</span>
               </button>
 
-              {/* Download Menu Button */}
+              {/* Download Menu Button (Direct if no raw, Dropdown if raw exists) */}
               <div className="relative">
                 <button
-                  onClick={() => setDownloadDropdown((prev) => !prev)}
-                  title="Download Image"
+                  onClick={() => {
+                    if (photo.rawUrl) {
+                      setDownloadDropdown((prev) => !prev)
+                    } else {
+                      handleDownload(photo.src, "jpg")
+                    }
+                  }}
+                  title={photo.rawUrl ? "Download options" : "Download image"}
                   disabled={isDownloading}
                   className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary-cyan text-black font-semibold text-xs hover:bg-cyan-300 transition-colors shadow-[0_0_15px_rgba(26,188,254,0.3)] disabled:opacity-50"
                 >
-                  <span>↓</span>
+                  <svg className="w-3.5 h-3.5 text-black flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                  </svg>
                   <span>{isDownloading ? ".downloading..." : ".download"}</span>
+                  {photo.rawUrl && <span className="text-[9px] opacity-70">▼</span>}
                 </button>
 
-                {/* Dropdown for Raw vs High-Res */}
-                {downloadDropdown && (
+                {/* Dropdown ONLY if rawUrl is provided */}
+                {Boolean(photo.rawUrl && downloadDropdown) && (
                   <div className="absolute right-0 top-10 w-48 rounded-2xl bg-neutral-900/95 border border-white/10 p-2 shadow-2xl flex flex-col gap-1 z-40 backdrop-blur-md">
                     <button
                       onClick={() => handleDownload(photo.src, "jpg")}
@@ -271,33 +280,31 @@ export default function FullscreenImageViewer({
                       </span>
                     </button>
 
-                    {photo.rawUrl && (
-                      <button
-                        onClick={() =>
-                          handleDownload(
-                            photo.rawUrl!,
-                            photo.rawUrl!.endsWith(".dng")
-                              ? "dng"
-                              : photo.rawUrl!.endsWith(".cr3")
-                              ? "cr3"
-                              : photo.rawUrl!.endsWith(".arw")
-                              ? "arw"
-                              : "jpg"
-                          )
-                        }
-                        className="w-full text-left px-3 py-2 text-xs rounded-xl hover:bg-white/10 text-primary-cyan flex flex-col transition-colors border-t border-white/5"
-                      >
-                        <span className="font-semibold flex items-center gap-1">
-                          <span>Original / RAW</span>
-                          <span className="text-[9px] px-1.5 py-0.2 bg-primary-cyan/20 text-primary-cyan rounded">
-                            RAW
-                          </span>
+                    <button
+                      onClick={() =>
+                        handleDownload(
+                          photo.rawUrl!,
+                          photo.rawUrl!.endsWith(".dng")
+                            ? "dng"
+                            : photo.rawUrl!.endsWith(".cr3")
+                            ? "cr3"
+                            : photo.rawUrl!.endsWith(".arw")
+                            ? "arw"
+                            : "jpg"
+                        )
+                      }
+                      className="w-full text-left px-3 py-2 text-xs rounded-xl hover:bg-white/10 text-primary-cyan flex flex-col transition-colors border-t border-white/5"
+                    >
+                      <span className="font-semibold flex items-center gap-1">
+                        <span>Original / RAW</span>
+                        <span className="text-[9px] px-1.5 py-0.2 bg-primary-cyan/20 text-primary-cyan rounded">
+                          RAW
                         </span>
-                        <span className="text-[10px] text-text-secondary-light-gray font-light">
-                          Uncompressed camera original
-                        </span>
-                      </button>
-                    )}
+                      </span>
+                      <span className="text-[10px] text-text-secondary-light-gray font-light">
+                        Uncompressed camera original
+                      </span>
+                    </button>
                   </div>
                 )}
               </div>
