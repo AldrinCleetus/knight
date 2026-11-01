@@ -83,7 +83,7 @@ export default function HobbyCategoryCard({ category }: HobbyCategoryCardProps) 
                 </>
               )}
 
-              {/* Card Top: Title & Status Badge */}
+              {/* Card Top: Title & Status Indicator */}
               <div className="relative z-10 flex items-start justify-between">
                 <div className="flex flex-col gap-1">
                   <div className="flex items-center gap-2">
@@ -96,10 +96,6 @@ export default function HobbyCategoryCard({ category }: HobbyCategoryCardProps) 
                     .{category.name}
                   </h2>
                 </div>
-
-                <span className="text-xs font-mono px-3 py-1 rounded-full bg-capsule-background-gray/90 text-text-secondary-light-gray border border-white/10 group-hover:border-primary-cyan/40 transition-colors">
-                  .8_captures
-                </span>
               </div>
 
               {/* Card Middle: Description & Genre Pills */}
@@ -183,7 +179,7 @@ export default function HobbyCategoryCard({ category }: HobbyCategoryCardProps) 
                 </div>
               </div>
 
-              {/* Card Top: Title & Status Badge */}
+              {/* Card Top: Title & Status Indicator */}
               <div className="relative z-10 flex items-start justify-between">
                 <div className="flex flex-col gap-1">
                   <div className="flex items-center gap-2">
@@ -196,10 +192,6 @@ export default function HobbyCategoryCard({ category }: HobbyCategoryCardProps) 
                     .{category.name}
                   </h2>
                 </div>
-
-                <span className="text-xs font-mono px-3 py-1 rounded-full bg-capsule-background-gray/80 text-text-secondary-light-gray border border-white/10">
-                  coming_soon
-                </span>
               </div>
 
               {/* Card Middle: Description & Craft Pills */}
