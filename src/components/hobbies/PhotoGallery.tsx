@@ -259,23 +259,18 @@ export default function PhotoGallery({ photos, initialSlug }: PhotoGalleryProps)
                   {/* Masonry Columns for this Location */}
                   <div className="columns-1 sm:columns-2 lg:columns-3 gap-5">
                     {locPhotos.map((photo) => (
-                      <motion.div
-                        layoutId={`card-container-${photo.slug}`}
+                      <div
                         key={photo.slug}
                         className="break-inside-avoid mb-5 cursor-pointer group"
                         onClick={() => openPhoto(photo.slug)}
-                        transition={{
-                          duration: 0.45,
-                          ease: [0.16, 1, 0.3, 1],
-                        }}
                       >
                         <GradientBorder rounded="3xl">
                           <div className="relative w-full overflow-hidden rounded-3xl bg-primary-background-black">
                             <motion.div
-                              layoutId={`photo-image-${photo.slug}`}
+                              layoutId={`photo-shared-${photo.slug}`}
                               className="relative w-full overflow-hidden rounded-3xl"
                               transition={{
-                                duration: 0.45,
+                                duration: 0.38,
                                 ease: [0.16, 1, 0.3, 1],
                               }}
                             >
@@ -323,7 +318,7 @@ export default function PhotoGallery({ photos, initialSlug }: PhotoGalleryProps)
                             </div>
                           </div>
                         </GradientBorder>
-                      </motion.div>
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -347,11 +342,13 @@ export default function PhotoGallery({ photos, initialSlug }: PhotoGalleryProps)
               onClick={closePhoto}
             />
 
-            {/* Modal Card with matching layoutId for morphing */}
+            {/* Modal Card */}
             <motion.div
-              layoutId={`card-container-${selectedPhoto.slug}`}
+              initial={{ opacity: 0, scale: 0.95, y: 12 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 12 }}
               transition={{
-                duration: 0.45,
+                duration: 0.25,
                 ease: [0.16, 1, 0.3, 1],
               }}
               className="relative z-10 w-full max-w-5xl max-h-[92vh] overflow-y-auto rounded-3xl bg-primary-background-black border border-white/10 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8)] p-6 md:p-8 lg:p-10 my-auto"
@@ -370,9 +367,9 @@ export default function PhotoGallery({ photos, initialSlug }: PhotoGalleryProps)
                 {/* Photo Shared Element with click-to-zoom trigger */}
                 <div className="relative group/preview w-full lg:w-[58%] flex-shrink-0">
                   <motion.div
-                    layoutId={`photo-image-${selectedPhoto.slug}`}
+                    layoutId={`photo-shared-${selectedPhoto.slug}`}
                     transition={{
-                      duration: 0.45,
+                      duration: 0.38,
                       ease: [0.16, 1, 0.3, 1],
                     }}
                     className="w-full rounded-2xl overflow-hidden bg-capsule-background-gray shadow-xl cursor-pointer"
