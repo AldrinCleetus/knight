@@ -22,6 +22,9 @@ function MainNavBar() {
           <Link href={mainRoutes.BLOG.link}>
             <p className="text-lg md:text-2xl hover:text-primary-cyan transition-colors">.blogs</p>
           </Link>
+          <Link href={mainRoutes.HOBBIES.link}>
+            <p className="text-lg md:text-2xl hover:text-primary-cyan transition-colors">.hobbies</p>
+          </Link>
           <Link href={mainRoutes.ABOUTME.link}>
             <p className="text-lg md:text-2xl hover:text-primary-cyan transition-colors">.about_me</p>
           </Link>
