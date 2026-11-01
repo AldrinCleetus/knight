@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useCallback } from "react"
+import { useState, useEffect, useCallback, useMemo } from "react"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 import { Photo } from "@/utils/types/hobbyTypes"
@@ -87,6 +87,34 @@ export default function PhotoGallery({ photos, initialSlug }: PhotoGalleryProps)
     }
   }, [selectedPhoto])
 
+  // Group photos by year (e.g. 2024, 2023), sorted descending
+  const photosByYear = useMemo(() => {
+    const groups: Record<string, Photo[]> = {}
+    photos.forEach((photo) => {
+      let yr = "Other"
+      if (photo.takenAt) {
+        const match = photo.takenAt.match(/\b(19\d\d|20\d\d)\b/)
+        yr = match ? match[1] : photo.takenAt
+      }
+      if (!groups[yr]) {
+        groups[yr] = []
+      }
+      groups[yr].push(photo)
+    })
+
+    const sortedYears = Object.keys(groups).sort((a, b) => {
+      const numA = parseInt(a, 10)
+      const numB = parseInt(b, 10)
+      if (!isNaN(numA) && !isNaN(numB)) return numB - numA
+      return a.localeCompare(b)
+    })
+
+    return sortedYears.map((year) => ({
+      year,
+      photos: groups[year],
+    }))
+  }, [photos])
+
   // Download logic
   const handleDownload = async (url: string, extension = "jpg") => {
     if (!selectedPhoto) return
@@ -118,56 +146,74 @@ export default function PhotoGallery({ photos, initialSlug }: PhotoGalleryProps)
 
   return (
     <>
-      {/* Masonry Columns Gallery */}
-      <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 mt-10 pb-20">
-        {photos.map((photo) => (
-          <motion.div
-            layoutId={`card-container-${photo.slug}`}
-            key={photo.slug}
-            className="break-inside-avoid mb-5 cursor-pointer group"
-            onClick={() => openPhoto(photo.slug)}
-            transition={{
-              duration: 0.45,
-              ease: [0.16, 1, 0.3, 1],
-            }}
-          >
-            <GradientBorder rounded="3xl">
-              <div className="relative w-full overflow-hidden rounded-3xl bg-primary-background-black">
+      {/* Photo Gallery Sections Grouped by Year */}
+      <div className="flex flex-col gap-16 w-full mt-10 pb-20">
+        {photosByYear.map(({ year, photos: yearPhotos }) => (
+          <section key={year} className="flex flex-col gap-6">
+            {/* Year Separator Header */}
+            <div className="flex items-center gap-4 pt-2">
+              <span className="text-2xl md:text-3xl font-extrabold text-white tracking-tight">
+                .{year}
+              </span>
+              <div className="h-[1px] flex-1 bg-gradient-to-r from-gradient-background-from via-gradient-background-to to-transparent" />
+              <span className="text-xs text-text-secondary-light-gray font-light px-3.5 py-1 rounded-full bg-capsule-background-gray border border-white/5">
+                {yearPhotos.length} {yearPhotos.length === 1 ? "photo" : "photos"}
+              </span>
+            </div>
+
+            {/* Masonry Columns for this Year */}
+            <div className="columns-1 sm:columns-2 lg:columns-3 gap-5">
+              {yearPhotos.map((photo) => (
                 <motion.div
-                  layoutId={`photo-image-${photo.slug}`}
-                  className="relative w-full overflow-hidden rounded-3xl"
+                  layoutId={`card-container-${photo.slug}`}
+                  key={photo.slug}
+                  className="break-inside-avoid mb-5 cursor-pointer group"
+                  onClick={() => openPhoto(photo.slug)}
                   transition={{
                     duration: 0.45,
                     ease: [0.16, 1, 0.3, 1],
                   }}
                 >
-                  <Image
-                    src={photo.src}
-                    alt={photo.alt}
-                    width={photo.width}
-                    height={photo.height}
-                    className="w-full h-auto object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                </motion.div>
+                  <GradientBorder rounded="3xl">
+                    <div className="relative w-full overflow-hidden rounded-3xl bg-primary-background-black">
+                      <motion.div
+                        layoutId={`photo-image-${photo.slug}`}
+                        className="relative w-full overflow-hidden rounded-3xl"
+                        transition={{
+                          duration: 0.45,
+                          ease: [0.16, 1, 0.3, 1],
+                        }}
+                      >
+                        <Image
+                          src={photo.src}
+                          alt={photo.alt}
+                          width={photo.width}
+                          height={photo.height}
+                          className="w-full h-auto object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        />
+                      </motion.div>
 
-                {/* Subtle hover vignette with title & location */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl flex flex-col justify-end p-5 pointer-events-none">
-                  {photo.title && (
-                    <p className="text-white font-semibold text-base leading-snug">
-                      {photo.title}
-                    </p>
-                  )}
-                  {photo.location && (
-                    <p className="text-primary-cyan text-xs font-light mt-1 flex items-center gap-1.5">
-                      <span>📍</span>
-                      <span>{photo.location}</span>
-                    </p>
-                  )}
-                </div>
-              </div>
-            </GradientBorder>
-          </motion.div>
+                      {/* Subtle hover vignette with title & location */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl flex flex-col justify-end p-5 pointer-events-none">
+                        {photo.title && (
+                          <p className="text-white font-semibold text-base leading-snug">
+                            {photo.title}
+                          </p>
+                        )}
+                        {photo.location && (
+                          <p className="text-primary-cyan text-xs font-light mt-1 flex items-center gap-1.5">
+                            <span>📍</span>
+                            <span>{photo.location}</span>
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  </GradientBorder>
+                </motion.div>
+              ))}
+            </div>
+          </section>
         ))}
       </div>
 
