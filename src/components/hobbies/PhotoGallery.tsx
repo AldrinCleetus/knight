@@ -248,7 +248,7 @@ export default function PhotoGallery({ photos, initialSlug }: PhotoGalleryProps)
                         />
                       </svg>
                       <h3 className="text-sm font-mono text-white/90 tracking-wide font-medium">
-                        {locName}
+                        .{locName.toLowerCase()}
                       </h3>
                       <span className="text-[10px] font-mono text-text-secondary-light-gray font-light px-2 py-0.5 rounded-full bg-capsule-background-gray/60 border border-white/5">
                         {locPhotos.length} {locPhotos.length === 1 ? "shot" : "shots"}

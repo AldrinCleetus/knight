@@ -58,11 +58,11 @@ export default function HobbyCategoryCard({ category }: HobbyCategoryCardProps) 
 
                   {/* Floating Stacked Miniature Photo Polaroids */}
                   <div className="absolute right-4 bottom-14 md:right-8 md:bottom-12 w-48 h-36 pointer-events-none hidden sm:block">
-                    {/* Back Photo: Mountain peaks */}
+                    {/* Back Photo: Vyttila backwaters */}
                     <div className="absolute right-0 top-0 w-32 h-24 rounded-2xl overflow-hidden border-2 border-white/15 bg-neutral-900 shadow-2xl rotate-6 group-hover:rotate-12 group-hover:translate-x-3 group-hover:-translate-y-2 group-hover:scale-105 transition-all duration-500 ease-out">
                       <Image
-                        src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80"
-                        alt="Landscape preview"
+                        src="/photography/vytilla-backwaters.jpg"
+                        alt="Vyttila backwaters preview"
                         width={200}
                         height={150}
                         className="w-full h-full object-cover opacity-70 group-hover:opacity-95 transition-opacity duration-300"
