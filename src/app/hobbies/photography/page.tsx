@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 import Link from "next/link"
+import { notFound } from "next/navigation"
 import SectionHeading from "@/components/shared/SectionHeading"
 import PhotoGallery from "@/components/hobbies/PhotoGallery"
 import { photographyData } from "@/contants/photographyData"
@@ -10,6 +11,9 @@ export const metadata: Metadata = {
 }
 
 export default function PhotographyPage() {
+  // Temporarily disabled so no one can visit — remove notFound() to re-enable
+  notFound()
+
   return (
     <div className="flex flex-col flex-1">
       {/* Breadcrumb */}

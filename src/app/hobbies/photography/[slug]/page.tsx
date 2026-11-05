@@ -23,6 +23,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default function PhotoDetailPage({ params }: Props) {
+  // Temporarily disabled so no one can visit — remove notFound() to re-enable
+  notFound()
+
   const photo = photographyData.find((p) => p.slug === params.slug)
   if (!photo) notFound()
 

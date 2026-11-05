@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { notFound } from "next/navigation"
 import SectionHeading from "@/components/shared/SectionHeading"
 import HobbyCategoryCard from "@/components/hobbies/HobbyCategoryCard"
 import { HobbyCategory } from "@/utils/types/hobbyTypes"
@@ -26,6 +27,9 @@ const hobbyCategories: HobbyCategory[] = [
 ]
 
 export default function HobbiesPage() {
+  // Temporarily disabled so no one can visit — remove notFound() to re-enable
+  notFound()
+
   return (
     <div className="flex flex-col flex-1 pb-20">
       <SectionHeading
